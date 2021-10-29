@@ -5,3 +5,4 @@ Features:
 - Set custom logo for login page and main menu 
 - Show enviorment name (stage or production) below main menu logo
 
+![alt text](docs/screenshots/demo.png)
