@@ -6,3 +6,4 @@ Features:
 - Show enviorment name (stage or production) below main menu logo
 
 ![alt text](docs/screenshots/demo.png)
+![alt text](docs/screenshots/login.png)
