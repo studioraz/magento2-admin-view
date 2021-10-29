@@ -31,4 +31,12 @@ class Style extends Template
         return $this->config;
     }
 
+    protected function _afterToHtml($html)
+    {
+       if (!$this->config->getActive()) {
+           return '';
+       }
+        return $html;
+    }
+
 }

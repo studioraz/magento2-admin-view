@@ -111,8 +111,17 @@ class Config
         return $this->storeManager->getStore()->getBaseUrl(UrlInterface::URL_TYPE_MEDIA) . self::UPLOAD_DIR . '/' . $file;
     }
 
-    public function getLogoImageUrl($logoConfigPath): ?string
+    /**
+     * possible $logoDefaultImageSrc values:
+     * - images/magento-logo.svg for login page,
+     * - images/magento-icon.svg for menu
+     * @param $logoDefaultImageSrc
+     * @return string|null
+     * @throws NoSuchEntityException
+     */
+    public function getLogoImageUrl($logoDefaultImageSrc): ?string
     {
+        $logoConfigPath = str_contains($logoDefaultImageSrc, 'logo') ? self::KEY_LOGIN_LOGO : self::KEY_MENU_LOGO;
 
         return $this->getImageUrl($logoConfigPath, self::LOGOS_PATH_GROUP);
     }

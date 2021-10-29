@@ -21,11 +21,11 @@ class Header implements ArgumentInterface
         $this->config = $config;
     }
 
-    public function getLogoImageUrl($logoConfigPath): ?string
+    public function getLogoImageUrl($logoPath): ?string
     {
         $imageUrl = null;
         if ($this->config->getActive()) {
-            $imageUrl = $this->config->getLogoImageUrl($logoConfigPath);
+            $imageUrl = $this->config->getLogoImageUrl($logoPath);
         }
         return $imageUrl;
     }

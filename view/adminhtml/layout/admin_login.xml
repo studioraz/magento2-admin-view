@@ -8,7 +8,6 @@
     <referenceBlock name="logo">
         <arguments>
             <argument name="view_model" xsi:type="object">SR\AdminView\ViewModel\Header</argument>
-            <argument name="logo_image_src" xsi:type="string">login_logo</argument>
         </arguments>
     </referenceBlock>
 </page>
