@@ -1,7 +1,7 @@
 {
     "name": "studioraz/magento2-admin-view",
     "version": "1.0.0",
-    "description": "N/A",
+    "description": "Customize your Magneto admin logos, color schema and add to it environment tag",
     "type": "magento2-module",
     "prefer-stable": true,
     "require": {
