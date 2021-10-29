@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!--
+  ~ Copyright © 2021 Studio Raz. All rights reserved.
+  ~ See LICENCE file for license details.
+  -->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-login"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <referenceBlock name="logo">
+        <arguments>
+            <argument name="view_model" xsi:type="object">SR\AdminView\ViewModel\Header</argument>
+            <argument name="logo_image_src" xsi:type="string">login_logo</argument>
+        </arguments>
+    </referenceBlock>
+</page>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright © 2021 Studio Raz. All rights reserved.
+  ~ See LICENCE file for license details.
+  -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="SR_AdminView::main"
+             parent="SR_Base::srbase"
+             module="SR_AdminView"
+             title="Admin View"
+             sortOrder="200"
+             resource="SR_AdminView::main"/>
+
+        <add id="SR_AdminView::srbaldarshipping"
+             parent="SR_AdminView::main"
+             module="SR_AdminView"
+             title="General Setting"
+             sortOrder="10"
+             resource="SR_AdminView::sradminview"
+             action="adminhtml/system_config/edit/section/sradminview" />
+    </menu>
+</config>

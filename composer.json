@@ -1,0 +1,33 @@
+{
+    "name": "studioraz/magento2-admin-view",
+    "version": "1.0.0",
+    "description": "N/A",
+    "type": "magento2-module",
+    "prefer-stable": true,
+    "require": {
+        "magento/framework": "*",
+        "studioraz/magento2-base": "*"
+    },
+    "license": [
+        "Proprietary"
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "SR\\AdminView\\": ""
+        }
+    },
+    "support": {
+        "email": "support@studioraz.co.il"
+    },
+    "authors": [
+        {
+            "name": "Studio Raz",
+            "email": "info@studioraz.co.il",
+            "homepage": "http://www.studioraz.co.il",
+            "role": "Developer"
+        }
+    ]
+}

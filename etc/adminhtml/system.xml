@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ Copyright © 2020 Studio Raz. All rights reserved.
+  ~ See LICENSE.txt for license details.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="sradminview" translate="label" type="text" showInDefault="1" showInWebsite="0" showInStore="0">
+            <label>Admin View</label>
+            <tab>studioraz</tab>
+            <resource>SR_AdminView::sradminview</resource>
+
+            <group id="general" translate="label" type="text" showInDefault="1" showInWebsite="0" showInStore="0"
+                   sortOrder="10">
+                <label>General</label>
+                <field id="active" translate="label" sortOrder="100" type="select" showInDefault="1" showInWebsite="0"
+                       showInStore="0" canRestore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+
+            <group id="environment" translate="label" type="text" showInDefault="1" showInWebsite="0" showInStore="0"
+                   sortOrder="10">
+                <label>Environment</label>
+                <field id="environment" translate="label" sortOrder="100" type="select" showInDefault="1" showInWebsite="0"
+                       showInStore="0">
+                    <label>Environment</label>
+                    <source_model>SR\AdminView\Model\Config\Source\EnvName</source_model>
+                </field>
+            </group>
+
+            <group id="logos" translate="label" type="text" showInDefault="1" showInWebsite="0" showInStore="0"
+                   sortOrder="10">
+                <label>Logos</label>
+                <field id="login_logo" translate="label comment" type="image" sortOrder="1600" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Login Logo</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">sradminview</upload_dir>
+                    <base_url type="media" scope_info="1">sradminview</base_url>
+                    <comment><![CDATA[Allowed file types: jpg, jpeg, gif, png.]]></comment>
+                </field>
+
+                <field id="menu_logo" translate="label comment" type="image" sortOrder="1600" showInDefault="1"
+                       showInWebsite="1" showInStore="0">
+                    <label>Menu Logo</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">sradminview</upload_dir>
+                    <base_url type="media" scope_info="1">sradminview</base_url>
+                    <comment><![CDATA[Allowed file types: jpg, jpeg, gif, png.]]></comment>
+                </field>
+
+            </group>
+            <group id="color_schema" translate="label" type="text" showInDefault="1" showInWebsite="0" showInStore="0"
+                   sortOrder="10">
+                <label>Color Schema</label>
+                <field id="background" translate="label" type="text" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Background</label>
+                    <frontend_model>SR\Base\Model\Config\Source\ColorPicker</frontend_model>
+                    <comment>Top-level menu,buttons and grid header default background-color</comment>
+                </field>
+                <field id="background_hover" translate="label" type="text" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Background On-Hover</label>
+                    <frontend_model>SR\Base\Model\Config\Source\ColorPicker</frontend_model>
+                    <comment>Top-level menu,buttons and grid header on-hover background-color</comment>
+                </field>
+                <field id="text_color" translate="label" type="text" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Text Color</label>
+                    <frontend_model>SR\Base\Model\Config\Source\ColorPicker</frontend_model>
+                    <comment>Top-level menu,buttons and grid header default color</comment>
+                </field>
+                <field id="text_color_hover" translate="label" type="text" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Text Color On-Hover</label>
+                    <frontend_model>SR\Base\Model\Config\Source\ColorPicker</frontend_model>
+                    <comment>Top-level menu,buttons and grid header on-hover color</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

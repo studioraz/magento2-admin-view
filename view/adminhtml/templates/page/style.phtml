@@ -1,0 +1,110 @@
+<?php
+/** @var $block \SR\AdminView\Block\Style */
+/** @var $cofigMode \SR\AdminView\Model\Config */
+$cofigMode = $block->getConfigModel();
+?>
+
+<style>
+
+    <?php if ($menuBackground = $cofigMode->getMenuBackground()): ?>
+    /** Main Menu */
+    .menu-wrapper:before, .admin__menu [class*='level-']:not(.level-0) a:hover {
+        background-color: <?= $menuBackground ?>;
+    }
+
+    /** Grid */
+    .data-grid th {
+        background-color: <?= $menuBackground ?>;
+    }
+
+    /** Primary Button */
+    .abs-action-primary, button.primary, .page-actions > button.action-primary, .page-actions .page-actions-buttons > button.action-primary, .page-actions .page-actions-buttons > .action.action-primary, .page-actions > button.primary, .page-actions .page-actions-buttons > button.primary, .page-actions .page-actions-buttons > .action.primary, .page-actions .page-actions.floating-header > button.action-primary, .page-actions .page-actions.floating-header > .action.action-primary, .page-actions .page-actions.floating-header > button.primary, .page-actions .page-actions.floating-header > .action.primary, .block-footer .action-add.primary, .page-actions > .block-footer .action-add.action-primary, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary, .page-actions > .block-footer .action-add.primary, .page-actions .page-actions-buttons > .block-footer .action-add.primary, .action-primary {
+        background-color: <?= $menuBackground ?>;
+        border-color: <?= $menuBackground ?>;
+    }
+
+    <?php endif; ?>
+
+    <?php if ($menuBackgroundHover = $cofigMode->getMenuBackgroundHover()): ?>
+
+    /** Main Menu (On Hover) */
+    .admin__menu .level-0._active > a, .admin__menu .level-0:hover > a, .admin__menu .level-0 > .submenu {
+        background-color: <?= $menuBackgroundHover ?>;
+    }
+
+
+    /** Grid */
+    .data-grid .data-grid-th._sortable:focus, .data-grid .data-grid-th._sortable:hover {
+        background-color: <?= $menuBackgroundHover ?>;;
+    }
+
+    /** Primary Button (On Hover) */
+    .abs-action-primary:hover, .abs-action-primary:active, .abs-action-primary:focus, button.primary:hover, button.primary:active, button.primary:focus, .page-actions > button.action-primary:hover, .page-actions > button.action-primary:active, .page-actions > button.action-primary:focus, .page-actions .page-actions-buttons > button.action-primary:hover, .page-actions .page-actions-buttons > button.action-primary:active, .page-actions .page-actions-buttons > button.action-primary:focus, .page-actions .page-actions-buttons > .action.action-primary:hover, .page-actions .page-actions-buttons > .action.action-primary:active, .page-actions .page-actions-buttons > .action.action-primary:focus, .page-actions > button.primary:hover, .page-actions > button.primary:active, .page-actions > button.primary:focus, .page-actions .page-actions-buttons > button.primary:hover, .page-actions .page-actions-buttons > button.primary:active, .page-actions .page-actions-buttons > button.primary:focus, .page-actions .page-actions-buttons > .action.primary:hover, .page-actions .page-actions-buttons > .action.primary:active, .page-actions .page-actions-buttons > .action.primary:focus, .page-actions .page-actions.floating-header > button.action-primary:hover, .page-actions .page-actions.floating-header > button.action-primary:active, .page-actions .page-actions.floating-header > button.action-primary:focus, .page-actions .page-actions.floating-header > .action.action-primary:hover, .page-actions .page-actions.floating-header > .action.action-primary:active, .page-actions .page-actions.floating-header > .action.action-primary:focus, .page-actions .page-actions.floating-header > button.primary:hover, .page-actions .page-actions.floating-header > button.primary:active, .page-actions .page-actions.floating-header > button.primary:focus, .page-actions .page-actions.floating-header > .action.primary:hover, .page-actions .page-actions.floating-header > .action.primary:active, .page-actions .page-actions.floating-header > .action.primary:focus, .block-footer .action-add.primary:hover, .block-footer .action-add.primary:active, .block-footer .action-add.primary:focus, .page-actions > .block-footer .action-add.action-primary:hover, .page-actions > .block-footer .action-add.action-primary:active, .page-actions > .block-footer .action-add.action-primary:focus, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:hover, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:active, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:focus, .page-actions > .block-footer .action-add.primary:hover, .page-actions > .block-footer .action-add.primary:active, .page-actions > .block-footer .action-add.primary:focus, .page-actions .page-actions-buttons > .block-footer .action-add.primary:hover, .page-actions .page-actions-buttons > .block-footer .action-add.primary:active, .page-actions .page-actions-buttons > .block-footer .action-add.primary:focus, .action-primary:hover {
+        background-color: <?= $menuBackgroundHover ?>;
+        border-color: <?= $menuBackgroundHover ?>;
+        box-shadow: 0 0 0 1px <?= $menuBackgroundHover ?>;
+    }
+
+    <?php endif; ?>
+
+    <?php if ($menuTextColor = $cofigMode->getMenuTextColor()): ?>
+    /** Main Menu Text */
+    .admin__menu .level-0 > a, .admin__menu .action-close::before, .abs-menu-separator, .admin__menu .level-0:first-child > a::after, .admin__menu .item-partners > a::after {
+        color: <?= $menuTextColor ?>;
+    }
+
+    .abs-menu-separator, .admin__menu .level-0:first-child > a::after, .admin__menu .item-partners > a::after {
+        background-color: <?= $menuTextColor ?>;
+    }
+
+    /** Grid */
+    .data-grid th span {
+        color: <?= $menuTextColor ?>;
+    }
+
+    /** Primary Button */
+    .abs-action-primary, button.primary, .page-actions > button.action-primary, .page-actions .page-actions-buttons > button.action-primary, .page-actions .page-actions-buttons > .action.action-primary, .page-actions > button.primary, .page-actions .page-actions-buttons > button.primary, .page-actions .page-actions-buttons > .action.primary, .page-actions .page-actions.floating-header > button.action-primary, .page-actions .page-actions.floating-header > .action.action-primary, .page-actions .page-actions.floating-header > button.primary, .page-actions .page-actions.floating-header > .action.primary, .block-footer .action-add.primary, .page-actions > .block-footer .action-add.action-primary, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary, .page-actions > .block-footer .action-add.primary, .page-actions .page-actions-buttons > .block-footer .action-add.primary, .action-primary {
+        color: <?= $menuTextColor ?>;
+    }
+
+    <?php endif; ?>
+
+    <?php if ($menuTextColorHover = $cofigMode->getMenuTextColorHover()): ?>
+    /** Main Menu (On Hover) */
+    .admin__menu .level-0._active > a, .admin__menu .level-0:hover > a, .admin__menu .action-close:hover::before, .admin__menu .submenu a, .admin__menu .submenu-title, .admin__menu .submenu .parent .submenu-group-title {
+        color: <?= $menuTextColorHover ?>;
+    }
+
+    /** Button (On Hover) */
+    .abs-action-primary:hover, .abs-action-primary:active, .abs-action-primary:focus, button.primary:hover, button.primary:active, button.primary:focus, .page-actions > button.action-primary:hover, .page-actions > button.action-primary:active, .page-actions > button.action-primary:focus, .page-actions .page-actions-buttons > button.action-primary:hover, .page-actions .page-actions-buttons > button.action-primary:active, .page-actions .page-actions-buttons > button.action-primary:focus, .page-actions .page-actions-buttons > .action.action-primary:hover, .page-actions .page-actions-buttons > .action.action-primary:active, .page-actions .page-actions-buttons > .action.action-primary:focus, .page-actions > button.primary:hover, .page-actions > button.primary:active, .page-actions > button.primary:focus, .page-actions .page-actions-buttons > button.primary:hover, .page-actions .page-actions-buttons > button.primary:active, .page-actions .page-actions-buttons > button.primary:focus, .page-actions .page-actions-buttons > .action.primary:hover, .page-actions .page-actions-buttons > .action.primary:active, .page-actions .page-actions-buttons > .action.primary:focus, .page-actions .page-actions.floating-header > button.action-primary:hover, .page-actions .page-actions.floating-header > button.action-primary:active, .page-actions .page-actions.floating-header > button.action-primary:focus, .page-actions .page-actions.floating-header > .action.action-primary:hover, .page-actions .page-actions.floating-header > .action.action-primary:active, .page-actions .page-actions.floating-header > .action.action-primary:focus, .page-actions .page-actions.floating-header > button.primary:hover, .page-actions .page-actions.floating-header > button.primary:active, .page-actions .page-actions.floating-header > button.primary:focus, .page-actions .page-actions.floating-header > .action.primary:hover, .page-actions .page-actions.floating-header > .action.primary:active, .page-actions .page-actions.floating-header > .action.primary:focus, .block-footer .action-add.primary:hover, .block-footer .action-add.primary:active, .block-footer .action-add.primary:focus, .page-actions > .block-footer .action-add.action-primary:hover, .page-actions > .block-footer .action-add.action-primary:active, .page-actions > .block-footer .action-add.action-primary:focus, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:hover, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:active, .page-actions .page-actions-buttons > .block-footer .action-add.action-primary:focus, .page-actions > .block-footer .action-add.primary:hover, .page-actions > .block-footer .action-add.primary:active, .page-actions > .block-footer .action-add.primary:focus, .page-actions .page-actions-buttons > .block-footer .action-add.primary:hover, .page-actions .page-actions-buttons > .block-footer .action-add.primary:active, .page-actions .page-actions-buttons > .block-footer .action-add.primary:focus {
+        color: <?= $menuTextColorHover ?>;
+    }
+    <?php endif; ?>
+
+
+    /* ============ ENVIRONMENT */
+
+    .environment-name {
+        z-index: 700;
+        border-top:5px solid white;
+        border-bottom:5px solid white;
+        font-weight: bold;
+        text-align: center;
+        position: relative;
+        padding: 8px 0;
+        text-transform: uppercase;
+        font-size: 11px;
+    }
+
+    .environment-name-stage {
+        background-color: orange;
+        color: blue;
+        letter-spacing: 1px;
+    }
+
+    .environment-name-production {
+        background-color: greenyellow;
+        color: black;
+    }
+
+</style>
