@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<!--
+  ~ Copyright © 2023 Studio Raz. All rights reserved.
+  ~ See LICENSE.txt for license details.
+  -->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Backend\Model\Locale\Manager">
+        <plugin name="sr_adminview_locale_default" type="SR\AdminView\Plugin\Model\Locale\ManagerPlugin" sortOrder="100" disabled="false"/>
+    </type>
+</config>
