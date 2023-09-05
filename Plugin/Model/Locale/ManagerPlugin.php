@@ -14,6 +14,11 @@ class   ManagerPlugin
 {
 
     /**
+     * AFTER plugin
+     * @see \Magento\Backend\Model\Locale\Manager::getGeneralLocale
+     *
+     * force to use default locale(en_US) in admin area, to prevent broken pages when static not builded for other locales
+     *
      * @param Manager $subject
      * @param $result
      * @return string
